@@ -77,11 +77,16 @@ jobs:
         run: npx playwright install --with-deps
       - name: Run Playwright tests (HTML report only)
         run: npx playwright test --reporter=html --output=reports/html-report
+      - name: Prepare report for GitHub Pages
+        run: |
+          rm -rf public
+          mkdir public
+          cp -r reports/html-report/* public/
       - name: Deploy Playwright HTML report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./reports/html-report
+          publish_dir: ./public
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com 

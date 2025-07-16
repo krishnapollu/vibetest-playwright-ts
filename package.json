@@ -1,0 +1,44 @@
+{
+  "name": "playwright-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "npx playwright test src/tests/ui --project=Chromium --project=Firefox --project=WebKit",
+    "test:api": "npx playwright test src/tests/api --project=API",
+    "test": "npx playwright test && ts-node src/tests/api",
+    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "allure open reports/allure-report",
+    "test:report": "npm run test && npm run allure:generate && npm run allure:open",
+    "cli": "ts-node src/utils/cli.ts",
+    "scaffold:test": "npm run cli -- scaffold:test",
+    "scaffold:page": "npm run cli -- scaffold:page",
+    "clean:logs": "npm run cli -- clean:logs",
+    "clean:reports": "npm run cli -- clean:reports"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@percy/playwright": "^1.0.8",
+    "@playwright/test": "^1.54.1",
+    "@types/faker": "^6.6.8",
+    "@types/node": "^24.0.14",
+    "allure-playwright": "^3.3.2",
+    "axios": "^1.10.0",
+    "commander": "^14.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^17.2.0",
+    "playwright": "^1.54.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "winston": "^3.17.0"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@percy/cli": "^1.31.0",
+    "ajv": "^8.17.1",
+    "axe-core": "^4.10.3",
+    "faker": "^6.6.6"
+  }
+}

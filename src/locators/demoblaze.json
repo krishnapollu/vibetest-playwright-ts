@@ -1,0 +1,20 @@
+{
+  "homePage": {
+    "category": "a.list-group-item:has-text('${category}')",
+    "product": ".card-title:has-text('${product}')",
+    "productTitles": ".card-title"
+  },
+  "loginPage": {
+    "loginButton": "#login2",
+    "loginModal": "#logInModal",
+    "usernameInput": "#loginusername",
+    "passwordInput": "#loginpassword",
+    "submitButton": "button:has-text('Log in')"
+  },
+  "cartPage": {
+    "cartButton": "#cartur",
+    "cartUrl": "**/cart.html",
+    "cartItems": ".success td:nth-child(2)",
+    "deleteButton": ".success td a:has-text('Delete')"
+  }
+} 

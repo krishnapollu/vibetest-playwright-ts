@@ -1,0 +1,7 @@
+{
+  "baseUrl": "https://reqres.in/api",
+  "users": "/users",
+  "login": "/login",
+  "register": "/register",
+  "products": "/products"
+} 

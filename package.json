@@ -20,9 +20,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@percy/playwright": "^1.0.8",
     "@playwright/test": "^1.54.1",
-    "@types/faker": "^6.6.8",
     "@types/node": "^24.0.14",
     "allure-playwright": "^3.3.2",
     "axios": "^1.10.0",
@@ -38,7 +38,6 @@
     "@axe-core/playwright": "^4.10.2",
     "@percy/cli": "^1.31.0",
     "ajv": "^8.17.1",
-    "axe-core": "^4.10.3",
-    "faker": "^6.6.6"
+    "axe-core": "^4.10.3"
   }
 }

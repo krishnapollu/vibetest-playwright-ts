@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import faker from 'faker';
+import { faker } from '@faker-js/faker';
 
 export class TestData {
   static loadJson(fileName: string) {
